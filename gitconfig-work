@@ -1,0 +1,5 @@
+[user]
+	name = Matt Hamlin
+	email = TODO
+[url "git@github.com:"]
+  insteadOf = "https://github.com"

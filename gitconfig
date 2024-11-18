@@ -1,0 +1,53 @@
+[color]
+	ui = true
+[push]
+	default = current
+[fetch]
+	prune = true
+[core]
+	autocrlf = false
+	preloadindex = true
+	fscache = true
+	symlinks = false
+	longpaths = true
+	editor = cursor --wait
+	pager = delta
+[log]
+	decorate = short
+[http]
+	sslVerify = false
+[pack]
+	useSparse = true
+[pull]
+	rebase = false
+[alias]
+	co = checkout
+	ci = commit
+	stat = "!MERGE_BASE=$(git merge-base origin/main HEAD); git diff -M --full-index $MERGE_BASE HEAD --stat"
+	st = status
+	statmono = "!MERGE_BASE=$(git merge-base origin/master HEAD); git diff -M --full-index $MERGE_BASE HEAD --stat"
+	br = branch
+[pager]
+	branch = false
+	diff = false
+[includeIf "gitdir:~/dev/personal/"]
+  path = ~/.gitconfig-personal
+[includeIf "gitdir:~/dev/work/"]
+  path = ~/.gitconfig-work
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[branchless "hint"]
+	smartlogFixAbandoned = false
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default

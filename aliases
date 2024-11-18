@@ -1,0 +1,13 @@
+alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+alias g=git
+alias co="g checkout"
+alias gfom="g fetch origin main"
+alias gfomm="g fetch origin main:main"
+alias gmom="g merge origin/main"
+alias ggood="g merge --no-edit main && g reset main && g add ."
+alias gcam="git add . && git commit -m"
+
+# alias code="code-insiders"
+# from: http://www.philandstuff.com/2014/02/09/git-pickaxe.html
+alias pickaxe="git log -p -S"
+alias k="kubectl"

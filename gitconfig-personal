@@ -1,0 +1,34 @@
+[user]
+  name = Matt Hamlin
+  email = matthewjameshamlin@gmail.com
+[color]
+	ui = true
+[push]
+	default = current
+[fetch]
+	prune = true
+[core]
+	autocrlf = false
+	preloadindex = true
+	fscache = true
+	symlinks = false
+	longpaths = true
+	editor = zed --wait
+[log]
+	decorate = short
+[http]
+	sslVerify = false
+[pack]
+	useSparse = true
+[pull]
+	rebase = false
+[alias]
+	co = checkout
+	ci = commit
+	stat = "!MERGE_BASE=$(git merge-base origin/main HEAD); git diff -M --full-index $MERGE_BASE HEAD --stat"
+	st = status
+	statmono = "!MERGE_BASE=$(git merge-base origin/master HEAD); git diff -M --full-index $MERGE_BASE HEAD --stat"
+	br = branch
+[pager]
+	branch = false
+	diff = false
