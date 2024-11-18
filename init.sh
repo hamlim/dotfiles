@@ -24,19 +24,27 @@ if [ ! -z "$1" ]; then
     fi
 fi
 
+BASE_URL="https://raw.githubusercontent.com/hamlim/dotfiles/refs/heads/main"
+
+echo "Downloading config files from GitHub..."
+
+echo "Downloading aliases..."
+curl -fsSL "${BASE_URL}/aliases" -o ~/.aliases
+
+echo "Downloading gitconfig..."
+curl -fsSL "${BASE_URL}/gitconfig" -o ~/.gitconfig
+
+echo "Downloading zshrc..."
+curl -fsSL "${BASE_URL}/zshrc" -o ~/.zshrc
+
 echo "Setting up Git configs"
-cp ./gitconfig ~/.gitconfig
 if [ ! -z "${work}" ]; then
-  cp ./gitconfig-work ~/.gitconfig-work
+  echo "Downloading gitconfig-work..."
+  curl -fsSL "${BASE_URL}/gitconfig-work" -o ~/.gitconfig-work
   sed -i '' "s/TODO/${work}/" ~/.gitconfig-work
 fi
-cp ./gitconfig-personal ~/.gitconfig-personal
-
-echo "Setting up zshrc config"
-cp ./zshrc ~/.zshrc
-
-echo "Setting up aliases"
-cp ./aliases ~/.aliases
+echo "Downloading gitconfig-personal..."
+curl -fsSL "${BASE_URL}/gitconfig-personal" -o ~/.gitconfig-personal
 
 # Warp
 echo "Installing Warp themes"

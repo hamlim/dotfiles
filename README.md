@@ -7,6 +7,10 @@ An in progress dotfile repo!
 - Run the script
   - If this is for a work machine, then pass in the work email, e.g. `./init.sh work=my-new-work-email@gmail.com`
 
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/hamlim/dotfiles/refs/heads/main/init.sh)"
+```
+
 
 ## What this repo does:
 
