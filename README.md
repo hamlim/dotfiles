@@ -11,7 +11,6 @@ An in progress dotfile repo!
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/hamlim/dotfiles/refs/heads/main/init.sh)"
 ```
 
-
 ## What this repo does:
 
 In this repo I have a plain `init.sh` script that initalizes the system with my usual go-to defaults for a variety of services and apps.
@@ -24,6 +23,9 @@ Specifcally:
 - Install common dev tools:
   - Install bun
   - Install deno
+- Setup "better-screenshot"
+  - Allows you to take a screenshot and copies it to a clipboard and also saves it to Dropbox
+  - See also: https://www.icloud.com/shortcuts/a74f9842e3fb41fb811a91c8ebdf37f7
 
 ## Manual Intervention Needed:
 

@@ -87,3 +87,9 @@ mkdir -p ~/dev/personal
 echo "Setting up GitHub CLI"
 gh auth login
 
+echo "Setting up better screenshots"
+mkdir -p ~/bin
+curl -fsSL "${BASE_URL}/better-screenshot.sh" -o ~/bin/better-screenshot
+chmod +x ~/bin/better-screenshot
+
+
