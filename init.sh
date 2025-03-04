@@ -91,5 +91,3 @@ echo "Setting up better screenshots"
 mkdir -p ~/bin
 curl -fsSL "${BASE_URL}/better-screenshot.sh" -o ~/bin/better-screenshot
 chmod +x ~/bin/better-screenshot
-
-
